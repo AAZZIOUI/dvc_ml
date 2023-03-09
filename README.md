@@ -1,6 +1,9 @@
 
 # References:
  - https://github.com/AAZZIOUI/dvc_ml
+
+ <img title="workflow" alt="Alt text" src="simple-workflow-01.png">
+ 
 # STEPS:
 ## STEP 01: Create an empty remote repository
 ## STEP 02: intialize a git local repository and connect to remote repository

@@ -1,4 +1,9 @@
 stages:
+  always_run:
+    # when you don't specify deps, it will always run when : dvc repro
+    # This helps mostly when you want to do a cleanup: you create a cleanup file that
+    # should always run first. 
+    cmd: python rough/test.py
   load_data:
     cmd: python src/stage_01_load_save.py --config=config/config.yaml
     deps:
