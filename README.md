@@ -1,13 +1,6 @@
 
-''' config.yaml:
-config.yaml will be used and accessed by all files that need data. All data will be configured here so that if we change anything related to data, we will have to change it only in this file.
-'''
-
-'''all_utils.py:
-will have all the files that are required.
-
-'''
-
+# References:
+ - https://github.com/AAZZIOUI/dvc_ml
 # STEPS:
 ## STEP 01: Create an empty remote repository
 ## STEP 02: intialize a git local repository and connect to remote repository
@@ -45,14 +38,14 @@ with open("README.md", "r", encoding="utf-8") as f:
     long_description = f.read()
 
 setup(
-    name="src",
+    name="dvc-ML-demo-AIOps",
     version="0.0.1",
     author="USER_NAME",
     description="A small package for dvc ml pipeline demo",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/c17hawke/dvc-ML-demo-AIOps",
-    author_email="sunny.c17hawke@gmail.com",
+    url="https://github.com/user_name/dvc-ML-demo-AIOps",
+    author_email="user_name@gmail.com",
     packages=["src"],
     python_requires=">=3.7",
     install_requires=[
@@ -77,6 +70,9 @@ dvc init
 ```bash
 mkdir -p src/utils config
 ```
+all_utils.py:
+will have all the files that are required.
+
 ## STEP 08: create the config file
 ```bash
 touch config/config.yaml
@@ -125,3 +121,4 @@ git add .
 git commit -m "stage 01 added"
 git push origin main
 ```
+
