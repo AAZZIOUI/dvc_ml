@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  load_data:
+    cmd: python src/stage_01_load_save.py --config=config/config.yaml
+    deps:
+    - path: config/config.yaml
+      md5: a09d821e4bf16c0289b29d4b6bf4e279
+      size: 215
+    - path: src/stage_01_load_save.py
+      md5: e0ba5ba4b58ca98ff4c00dc051511d0d
+      size: 1022
+    - path: src/utils/all_utils.py
+      md5: 0f4d65e84f8385b4d60948b3fcd69ebb
+      size: 327
+    outs:
+    - path: artifacts/raw_local_dir/winequality-red.csv
+      md5: 7d814a1bda02145efe703f4e1c01847a
+      size: 91999
