@@ -1,3 +1,13 @@
+Metadata-Version: 2.1
+Name: dvc-with-ML-experiment
+Version: 0.0.1
+Summary: A small package for dvc ML demo
+Home-page: https://github.com/AAZZIOUI/dvc_ml
+Author: AAZZIOUI
+License: GNU
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
 
 ''' config.yaml:
 config.yaml will be used and accessed by all files that need data. All data will be configured here so that if we change anything related to data, we will have to change it only in this file.
