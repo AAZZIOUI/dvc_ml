@@ -4,8 +4,8 @@ stages:
     cmd: python src/stage_01_load_save.py --config=config/config.yaml
     deps:
     - path: config/config.yaml
-      md5: bcf610e3f974d4b529542e44904f09a5
-      size: 287
+      md5: 97401054d389a4b617de79a6a0c3c241
+      size: 342
     - path: src/stage_01_load_save.py
       md5: e0ba5ba4b58ca98ff4c00dc051511d0d
       size: 1022
@@ -21,9 +21,12 @@ stages:
   split_data:
     cmd: python src/stage_02_split_data.py --config=config/config.yaml --params=params.yaml
     deps:
+    - path: artifacts/raw_local_dir/winequality-red.csv
+      md5: 7d814a1bda02145efe703f4e1c01847a
+      size: 91999
     - path: config/config.yaml
-      md5: bcf610e3f974d4b529542e44904f09a5
-      size: 287
+      md5: 97401054d389a4b617de79a6a0c3c241
+      size: 342
     - path: src/stage_02_split_data.py
       md5: c91e0e3f9177d98cf9589537850e854e
       size: 1841
@@ -48,11 +51,11 @@ stages:
       md5: e683c1d146b604dc7ac3a46cfcc079c4
       size: 64363
     - path: config/config.yaml
-      md5: bcf610e3f974d4b529542e44904f09a5
-      size: 287
+      md5: 97401054d389a4b617de79a6a0c3c241
+      size: 342
     - path: src/stage_03_train.py
-      md5: fcdff07b8620347628e6954806791e7f
-      size: 1349
+      md5: 4c0b5322b9a32ceda8ca6c8c3f014e92
+      size: 1650
     - path: src/utils/all_utils.py
       md5: f8049a437b229b3a49a183e7ec718fe5
       size: 676
@@ -61,3 +64,7 @@ stages:
         model_params.ElasticNet.params.alpha: 0.5
         model_params.ElasticNet.params.l1_ratio: 0.5
         model_params.ElasticNet.params.random_state: 42
+    outs:
+    - path: artifacts/model_dir/ElasticNet.model
+      md5: 47231333cfd9ca85b362cd7b9575a2ef
+      size: 1215

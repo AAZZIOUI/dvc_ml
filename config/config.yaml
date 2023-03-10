@@ -1,10 +1,13 @@
 data_source : https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv
 
 artifacts:
-  artifacts_dir : artifacts
-  raw_local_dir : raw_local_dir
-  raw_local_file : winequality-red.csv
+  artifacts_dir: artifacts
+  raw_local_dir: raw_local_dir
+  raw_local_file: winequality-red.csv
 
   split_data_dir: split_data_dir
-  train : train.csv
-  test : test.csv
+  train: train.csv
+  test: test.csv
+
+  model_dir: model_dir
+  model_filename: ElasticNet.model

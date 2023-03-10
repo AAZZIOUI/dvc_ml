@@ -19,6 +19,7 @@ stages:
       - src/stage_02_split_data.py
       - src/utils/all_utils.py
       - config/config.yaml
+      - artifacts/raw_local_dir/winequality-red.csv
     params:
       - base.random_state
       - base.test_size
@@ -38,5 +39,7 @@ stages:
       - model_params.ElasticNet.params.alpha
       - model_params.ElasticNet.params.l1_ratio
       - model_params.ElasticNet.params.random_state
+    outs:
+      - artifacts/model_dir/ElasticNet.model
 
       
